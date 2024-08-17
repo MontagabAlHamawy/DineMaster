@@ -1,3 +1,4 @@
+import DashboardCharts from '@/components/DashboardCharts';
 import LargeCard from '@/components/LargeCard'
 import SmoleCard from '@/components/SmoleCard';
 import React from 'react'
@@ -80,6 +81,7 @@ export default function Dashboard() {
           )
         })}
       </div>
+      <DashboardCharts/>
     </div>
   )
 }

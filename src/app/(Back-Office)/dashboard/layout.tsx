@@ -13,7 +13,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   return (
     <div className="xl:flex xl:justify-start xl:items-start xl:flex-row">
-      <div className="hidden xl:block">
+      <div className="hidden xl:block sticky top-0 left-0">
         <Sidebar isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
       </div>
       <div className="w-full">
