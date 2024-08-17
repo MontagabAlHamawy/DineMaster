@@ -1,6 +1,7 @@
-import DashboardCharts from '@/components/DashboardCharts';
-import LargeCard from '@/components/LargeCard'
-import SmoleCard from '@/components/SmoleCard';
+import CastomdataTable from '@/components/BackComponents/CastomdataTable';
+import DashboardCharts from '@/components/BackComponents/DashboardCharts';
+import LargeCard from '@/components/BackComponents/LargeCard'
+import SmoleCard from '@/components/BackComponents/SmoleCard';
 import React from 'react'
 import { PiCardsThreeDuotone, PiCheckLight, PiCreditCardDuotone, PiLadderDuotone, PiShoppingCartSimpleDuotone, PiTruckDuotone } from 'react-icons/pi'
 import { SlRefresh } from 'react-icons/sl'
@@ -67,21 +68,22 @@ export default function Dashboard() {
   return (
     <div>
       <h1 className='text-xl font-semibold'>Dashboard Overview</h1>
-      <div className='grid grid-cols-2 xl:grid-cols-5 gap-2 mt-5'>
+      <div className='grid grid-cols-2 xl:grid-cols-5 gap-4 mt-4'>
         {card1.map((card: any, index: any) => {
           return (
             <LargeCard card={card} key={index} />
           )
         })}
       </div>
-      <div className='grid grid-cols-2 xl:grid-cols-4 gap-2 my-5'>
+      <div className='grid grid-cols-2 xl:grid-cols-4 gap-4 my-4'>
         {card2.map((cardd: any, index: any) => {
           return (
             <SmoleCard key={index} cardd={cardd} />
           )
         })}
       </div>
-      <DashboardCharts/>
+      <DashboardCharts />
+      <CastomdataTable />
     </div>
   )
 }

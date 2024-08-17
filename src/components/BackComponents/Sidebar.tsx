@@ -14,7 +14,7 @@ export default function Sidebar({ isVisible, toggleSidebar }: { isVisible: boole
   }
 
   return (
-    <div className={`${isVisible ? 'flex' : 'hidden'} justify-start items-start flex-col bg-sidebar static gap-5 min-h-screen p-5`}>
+    <div className={`${isVisible ? 'flex' : 'hidden'} justify-start items-start flex-col bg-section static gap-5 min-h-screen p-5`}>
       <Link
         className={`text-2xl font-bold text-accent`}
         href='/'

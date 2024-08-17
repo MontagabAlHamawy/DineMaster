@@ -63,22 +63,25 @@ export default function WeekleSalesChart() {
     ]
   }
   return (
-    <div className='p-8 bg-slate-700 rounded-md min-h-28'>
+    <div className='p-8 bg-section rounded-md min-h-28'>
       <h1 className='text-xl font-bold'>Weekly Sales</h1>
       <div className="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
         <ul className="flex flex-wrap -mb-px">
-        <li className="me-2">
-            <button onClick={() => setLabel(3)} className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg ${label === 3 ? 'active border-accent dark:text-accent' : 'hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'} `}>
+          <li className="me-2">
+            <button onClick={() => setLabel(3)} className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg active 
+               ${label === 3 ? 'text-accent  border-accent rounded-t-lg  dark:text-accent dark:border-accent' : 'hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'} `}>
               All
             </button>
           </li>
           <li className="me-2">
-            <button onClick={() => setLabel(1)} className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg ${label === 1 ? 'active border-accent dark:text-accent' : 'hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'} `}>
+            <button onClick={() => setLabel(1)} className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg active 
+               ${label === 1 ? 'text-accent  border-accent rounded-t-lg  dark:text-accent dark:border-accent' : 'hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'} `}>
               Sales
             </button>
           </li>
           <li className="me-2">
-            <button onClick={() => setLabel(2)} className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg ${label === 2 ? 'active border-accent dark:text-accent' : 'hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'} `}>
+            <button onClick={() => setLabel(2)} className={`inline-block p-4 border-b-2 border-transparent rounded-t-lg active 
+               ${label === 2 ? 'text-accent  border-accent rounded-t-lg  dark:text-accent dark:border-accent' : 'hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300'} `}>
               Orders
             </button>
           </li>

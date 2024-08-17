@@ -25,7 +25,7 @@ const config: Config = {
           hover: "#1d4ec8",
         },
         body: "#111827",
-        section: "#272831",
+        section: "#1e293b",
         sidebar: "#1f2937",
         text:'#6b7280'
       },

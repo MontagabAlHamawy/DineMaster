@@ -1,6 +1,6 @@
 "use client";
-import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
+import Header from "@/components/BackComponents/Header";
+import Sidebar from "@/components/BackComponents/Sidebar";
 import { useState } from "react";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
@@ -17,13 +17,13 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         <Sidebar isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
       </div>
       <div className="w-full">
-        <div className="sticky top-0 left-0">
+        <div className="sticky top-0 left-0 z-50">
           <Header toggleSidebar={() => { setIsSidebarVisible2(!isSidebarVisible2); setIsSidebarVisible(!isSidebarVisible) }} />
           <div className="xl:hidden">
             <Sidebar isVisible={isSidebarVisible2} toggleSidebar={toggleSidebar} />
           </div>
         </div>
-        <div className={`${!isSidebarVisible2 ? 'block' : 'hidden xl:block'} mx-5 mt-5`}>
+        <div className={`${!isSidebarVisible2 ? 'block' : 'hidden xl:block'} mx-4 mt-4`}>
           {children}
         </div>
       </div>
