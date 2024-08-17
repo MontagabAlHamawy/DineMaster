@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Markets() {
   return (
-    <div>Markets</div>
+    <div className='text-xl font-semibold'>Markets</div>
   )
 }

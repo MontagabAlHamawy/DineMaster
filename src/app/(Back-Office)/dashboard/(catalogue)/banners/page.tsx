@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Banners() {
   return (
-    <div>Banners</div>
+    <div className='text-xl font-semibold'>Banners</div>
   )
 }

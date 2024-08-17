@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Settings() {
   return (
-    <div>Settings</div>
+    <div className='text-xl font-semibold'>Settings</div>
   )
 }

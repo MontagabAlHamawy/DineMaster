@@ -18,12 +18,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       </div>
       <div className="w-full">
         <div className="sticky top-0 left-0">
-          <Header toggleSidebar={() => { setIsSidebarVisible2(!isSidebarVisible2); setIsSidebarVisible(!isSidebarVisible) }}  />
+          <Header toggleSidebar={() => { setIsSidebarVisible2(!isSidebarVisible2); setIsSidebarVisible(!isSidebarVisible) }} />
           <div className="xl:hidden">
             <Sidebar isVisible={isSidebarVisible2} toggleSidebar={toggleSidebar} />
           </div>
         </div>
-        <div className={`${!isSidebarVisible2 ? 'flex' : 'hidden'}  flex justify-center items-center text-2xl h-[90vh] w-full`}>
+        <div className={`${!isSidebarVisible2 ? 'block' : 'hidden xl:block'} mx-5 mt-5`}>
           {children}
         </div>
       </div>

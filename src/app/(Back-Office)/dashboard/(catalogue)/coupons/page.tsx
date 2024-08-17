@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Coupons() {
   return (
-    <div>Coupons</div>
+    <div className='text-xl font-semibold'>Coupons</div>
   )
 }

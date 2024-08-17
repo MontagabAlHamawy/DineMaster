@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Categories() {
   return (
-    <div>Categories</div>
+    <div className='text-xl font-semibold'>Categories</div>
   )
 }

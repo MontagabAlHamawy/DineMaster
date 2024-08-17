@@ -14,16 +14,16 @@ export default function Sidebar({ isVisible, toggleSidebar }: { isVisible: boole
   }
 
   return (
-    <div className={`${isVisible ? 'flex' : 'hidden'} justify-start items-start flex-col bg-[#1f2937] static gap-5 min-h-screen p-5`}>
+    <div className={`${isVisible ? 'flex' : 'hidden'} justify-start items-start flex-col bg-sidebar static gap-5 min-h-screen p-5`}>
       <Link
-        className={`text-2xl font-bold ${route === '/' ? 'text-blue-700' : 'text-slate-500'}`}
+        className={`text-2xl font-bold text-accent`}
         href='/'
         onClick={toggleSidebar}
       >
         DineMaster
       </Link>
       <Link
-        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard' ? 'text-blue-700' : 'text-slate-500'}`}
+        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard' ? 'text-accent' : 'text-slate-500'}`}
         href='/dashboard'
         onClick={toggleSidebar}
       >
@@ -33,46 +33,43 @@ export default function Sidebar({ isVisible, toggleSidebar }: { isVisible: boole
         </div>
       </Link>
       <div onClick={toggleList} className='px-2 py-1 rounded-sm min-w-28'>
-        <div className={`cursor-pointer flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold text-slate-500 hover:text-white 
-          ${route === '/dashboard/attributes' || route === '/dashboard/banners' || route === '/dashboard/categories' || route === '/dashboard/coupons' || route === '/dashboard/products' ? 'text-blue-700' : 'text-[#6b7280]'}`}>
+        <div className={`cursor-pointer flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold  hover:text-white 
+          ${route === '/dashboard/attributes' || route === '/dashboard/banners' || route === '/dashboard/categories' || route === '/dashboard/coupons' || route === '/dashboard/products' ? 'text-accent' : 'text-text'}`}>
           <PiCodesandboxLogoDuotone size={23} />
-          <div className='hover:text-white'>
-            Catalog
-          </div>
+          Catalog
           {list ? <PiCaretDown /> : <PiCaretRight />}
         </div>
       </div>
-      <div className={`${list ? 'flex' : 'hidden'} items-start justify-start flex-col w-full gap-1 mt-[-20px] bg-[#111827] rounded-md py-2 mr-[-50px]`}>
+      <div className={`${list ? 'flex' : 'hidden'} items-start justify-start flex-col w-full gap-1 mt-[-20px] bg-body rounded-md py-2 mr-[-50px]`}>
         <Link
-          className={`font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/attributes' ? 'text-blue-700' : 'text-[#6b7280]'}`}
+          className={`font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/attributes' ? 'text-accent' : 'text-text'}`}
           href='/dashboard/attributes'
-          onClick={toggleSidebar}
-        >
+          onClick={toggleSidebar}>
           - Attributes
         </Link>
         <Link
-          className={`font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/banners' ? 'text-blue-700' : 'text-[#6b7280]'}`}
+          className={`font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/banners' ? 'text-accent' : 'text-text'}`}
           href='/dashboard/banners'
           onClick={toggleSidebar}
         >
           - Banners
         </Link>
         <Link
-          className={`font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/categories' ? 'text-blue-700' : 'text-[#6b7280]'}`}
+          className={`font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/categories' ? 'text-accent' : 'text-text'}`}
           href='/dashboard/categories'
           onClick={toggleSidebar}
         >
           - Categories
         </Link>
         <Link
-          className={`font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/coupons' ? 'text-blue-700' : 'text-[#6b7280]'}`}
+          className={`font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/coupons' ? 'text-accent' : 'text-text'}`}
           href='/dashboard/coupons'
           onClick={toggleSidebar}
         >
           - Coupons
         </Link>
         <Link
-          className={`font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/products' ? 'text-blue-700' : 'text-[#6b7280]'}`}
+          className={`font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/products' ? 'text-accent' : 'text-text'}`}
           href='/dashboard/products'
           onClick={toggleSidebar}
         >
@@ -80,7 +77,7 @@ export default function Sidebar({ isVisible, toggleSidebar }: { isVisible: boole
         </Link>
       </div>
       <Link
-        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/customers' ? 'text-blue-700' : 'text-slate-500'}`}
+        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/customers' ? 'text-accent' : 'text-slate-500'}`}
         href='/dashboard/customers'
         onClick={toggleSidebar}
       >
@@ -88,23 +85,23 @@ export default function Sidebar({ isVisible, toggleSidebar }: { isVisible: boole
         Customers
       </Link>
       <Link
-        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/farmers' ? 'text-blue-700' : 'text-slate-500'}`}
+        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/farmers' ? 'text-accent' : 'text-slate-500'}`}
         href='/dashboard/farmers'
         onClick={toggleSidebar}
       >
-        <PiFarmDuotone size={23}/>
+        <PiFarmDuotone size={23} />
         Farmers
       </Link>
       <Link
-        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/markets' ? 'text-blue-700' : 'text-slate-500'}`}
+        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/markets' ? 'text-accent' : 'text-slate-500'}`}
         href='/dashboard/markets'
         onClick={toggleSidebar}
       >
-        <PiStorefrontDuotone size={23}/>
+        <PiStorefrontDuotone size={23} />
         Markets
       </Link>
       <Link
-        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/orders' ? 'text-blue-700' : 'text-slate-500'}`}
+        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/orders' ? 'text-accent' : 'text-slate-500'}`}
         href='/dashboard/orders'
         onClick={toggleSidebar}
       >
@@ -112,7 +109,7 @@ export default function Sidebar({ isVisible, toggleSidebar }: { isVisible: boole
         Orders
       </Link>
       <Link
-        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/out-staff' ? 'text-blue-700' : 'text-slate-500'}`}
+        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/out-staff' ? 'text-accent' : 'text-slate-500'}`}
         href='/dashboard/out-staff'
         onClick={toggleSidebar}
       >
@@ -120,7 +117,7 @@ export default function Sidebar({ isVisible, toggleSidebar }: { isVisible: boole
         Out Staff
       </Link>
       <Link
-        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/settings' ? 'text-blue-700' : 'text-slate-500'}`}
+        className={`flex flex-row justify-start items-center gap-5 xl:gap-3 font-semibold hover:text-white px-2 py-1 rounded-sm min-w-28 ${route === '/dashboard/settings' ? 'text-accent' : 'text-slate-500'}`}
         href='/dashboard/settings'
         onClick={toggleSidebar}
       >

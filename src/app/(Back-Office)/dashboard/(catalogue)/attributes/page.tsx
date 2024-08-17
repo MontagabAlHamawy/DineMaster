@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Attributes() {
   return (
-    <div>Attributes</div>
+    <div className='text-xl font-semibold'>Attributes</div>
   )
 }
