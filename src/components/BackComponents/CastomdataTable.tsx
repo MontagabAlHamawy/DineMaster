@@ -1,12 +1,14 @@
 'use client'
 import React, { useState } from 'react'
 import { data } from '@/components/data'
+import { usePathname } from 'next/navigation';
 export default function CastomdataTable() {
     const PageCize = 20;
     const [carrentPage, setCarrentPage] = useState(1);
     const endIndex = 5 * carrentPage;
     const startIndex = endIndex - 5;
     const currentlyDispalyedData = data.slice(startIndex, endIndex);
+
     return (
         <div className='mb-10'>
             <h1 className='text-xl font-bold mb-2'>Recent Order</h1>
@@ -46,7 +48,7 @@ export default function CastomdataTable() {
                                 <tr key={prodact.id} className="bg-white border-b dark:bg-section dark:border-body hover:bg-sidebar dark:hover:bg-sidebar">
                                     <td className="w-4 p-4">
                                         <div className="flex items-center">
-                                            <input id="checkbox-table-search-1" type="checkbox"  className="w-4 h-4 cursor-pointer text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                            <input id="checkbox-table-search-1" type="checkbox" className="w-4 h-4 cursor-pointer text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
                                             <label className="sr-only">checkbox</label>
                                         </div>
                                     </td>
@@ -74,7 +76,7 @@ export default function CastomdataTable() {
 
                     </tbody>
                 </table>
-                <nav className="flex items-center flex-column flex-wrap md:flex-row justify-between pt-4" aria-label="Table navigation">
+                <nav className="flex pb-5 xl:pb-0 items-center flex-column flex-wrap md:flex-row justify-between pt-4" aria-label="Table navigation">
                     <span className="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4 md:mb-0 block w-full md:inline md:w-auto">Showing <span className="font-semibold text-gray-900 dark:text-white">{startIndex + 1} - {endIndex}</span> of <span className="font-semibold text-gray-900 dark:text-white">{PageCize}</span></span>
                     <ul className="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8">
                         <li>
